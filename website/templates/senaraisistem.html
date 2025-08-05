@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Senarai Sistem</title>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav__header">
+            <a href="#" class="logo">Sistem Rekod Profil</a>
+        </div>
+        <div class="nav_menu_btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+        </div>
+        <ul class="nav_links" id="nav-links">
+             <li><a href="{% url 'dashboard' %}" >DASHBOARD</a></li>
+            <li><a href="{% url 'senaraisistem' %}" >SENARAI SISTEM</a></li>
+            <li><a href="{% url 'sistembaharu' %}">SISTEM BAHARU</a></li>
+        </ul>
+    </nav>
+
+    <!--Sistem List Table-->
+    <div class="Sistem-table-container">
+        <div class="table-header">
+            <h2 class="table-title">Senarai Sistem</h2>
+                 <button class="add-sistem-btn" onclick="toggleAddForm()">
+                    <i class="ri-add-line"></i>
+                    Tambah Sistem
+                </button>
+        </div>
+
+        <table class="sistem-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama Sistem</th>
+                    <th>Programming</th>
+                    <th>Public IP</th>
+                    <th>URL</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="id-cell">try</td>
+                    <td class="nama-cell">try</td>
+                    <td class="programming-cell">try</td>
+                    <td class="public-cell">try</td>
+                    <td class="URL-cell">try</td>
+                    <td class="action-cell">
+                         <a href="#" class="action-btn edit-btn">
+                                <i class="ri-edit-line"></i>
+                                Edit
+                            </a>
+                            <a href="#" 
+                               class="action-btn delete-btn" 
+                               onclick="return confirm('Adakah anda pasti mahu memadam sistem ini?');">
+                                <i class="ri-delete-bin-line"></i>
+                                Delete
+                            </a>
+                    </td>
+                </tr>
+                
+            </tbody>
+
+        </table>
+
+    </div>
+    
+</body>
+</html>
