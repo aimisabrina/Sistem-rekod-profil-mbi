@@ -10,6 +10,8 @@
 </head>
 
 <body>
+     <div id="message">{{message}}</div>
+
     <div class="container">
         <div class="login-content">
             <form method="POST">
@@ -20,7 +22,7 @@
                 <div class="input-div one">
                     <div class="div">
                         <h5>ID Staff</h5>
-                        <input type="text" name="user_id" class="input">
+                        <input type="text" name="id" class="input">
                     </div>
                 </div>
                
@@ -35,6 +37,15 @@
             </form>
         </div>
     </div>
+    
+     <script>
+        setTimeout(function() {
+            var msg = document.getElementById('message');
+            if (msg) {
+                msg.style.display = 'none';
+            }
+        }, 3000);
+    </script>
     
 </body>
 
