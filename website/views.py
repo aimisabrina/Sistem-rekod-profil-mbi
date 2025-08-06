@@ -1,9 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
 
-# Create your views here.
+# Start views below
+def login_view(request):
+    if request.method == "POST":
+        user_id = request.POST.get("user_id")
+        password = request.POST.get("password")
 
-def index(request):
-    return render (request,"index.html")
+        # authenticate uses username by default
+        user = authenticate(request, username=user_id, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect("dashboard")   
+        else:
+            messages.error(request, "Invalid ID or Password")
+
+    return render(request, "index.html") 
 
 def dashboard(request):
     return render (request, "dashboard.html")

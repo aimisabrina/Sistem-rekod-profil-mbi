@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+             <link rel="stylesheet" type="text/css" href="{% static 'css/listsystem.css' %}">
 </head>
 
 
@@ -43,15 +45,16 @@
                     <th>Public IP</th>
                     <th>URL</th>
                     <th>Action</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td class="id-cell">try</td>
-                    <td class="nama-cell">try</td>
-                    <td class="programming-cell">try</td>
-                    <td class="public-cell">try</td>
-                    <td class="URL-cell">try</td>
+                    <td class="id-cell"></td>
+                    <td class="nama-cell"></td>
+                    <td class="programming-cell"></td>
+                    <td class="public-cell"></td>
+                    <td class="URL-cell"></td>
                     <td class="action-cell">
                          <a href="#" class="action-btn edit-btn">
                                 <i class="ri-edit-line"></i>
